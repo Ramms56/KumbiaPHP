@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<?php echo Tag::css('estilos') ?>
+	<title>Titulos</title>
+
+</head>
+<body>
+	<section align="center">
+		<?php View::content(); ?>
+<br>
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+ 
+<form>
+<h3>Editar Participante</h3>
+
+<table cellspacing="12px">
+	<tr>
+		<td>
+			 <label>Nombre Completo</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('participante.nombrecompleto') ?>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			 <label>Curp</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('participante.curp') ?>
+		</td>
+	</tr>
+		<tr>
+		<td>
+			 <label>Instituto de Procedencia</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('participante.intitucionprocedencia') ?>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			 <label>Cuenta</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('participante.cuenta') ?>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			 <label>Password</label>
+		</td>
+		<td>
+        	 <?php echo Form::pass('participante.password') ?>
+		</td>
+	</tr>
+	
+	<tr>
+		<th colspan="2">
+			   <?php echo Form::hidden('participante.id') ?>
+        <?php echo Form::submit('Actualizar') ?>
+		</th>
+	</tr>
+        
+        
+        
+
+
+</table>
+<?php echo Html::linkAction("", 'Volver') ?>
+</form>
+   
+<?php echo Form::close() ?>
+</section>
+</body>
+</html>

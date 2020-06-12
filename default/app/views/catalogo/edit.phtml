@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<?php echo Tag::css('estilos') ?>
+	<title>Titulos</title>
+
+</head>
+<body>
+	<section align="center">
+<?php View::content(); ?>
+<br>
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+ 
+<form>
+<h3 align="center">Editar Organizador</h3>
+
+<table cellspacing="12px">
+<tr>
+		<td>
+			 <label>Titulo</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('catalogo.titulo') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Actividad</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('catalogo.actividad_id') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Evento</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('catalogo.evento_id') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Costo</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('catalogo.costo') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Total Horas</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('catalogo.totalhoras') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Cupo Limite</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('catalogo.cupolimite') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<th colspan="2">
+			   <?php echo Form::hidden('catalogo.id') ?>
+        <?php echo Form::submit('Actualizar') ?>
+		</th>
+	</tr>
+        
+
+
+</table>
+
+<?php echo Html::linkAction("", 'Volver') ?>
+</form>
+   
+<?php echo Form::close() ?>
+</section>
+</body>
+</html>

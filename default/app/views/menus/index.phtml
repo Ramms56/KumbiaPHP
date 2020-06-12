@@ -1,0 +1,26 @@
+<div class="content">
+    <?php View::content(); ?>
+    <h3>Menus</h3>
+    <table id="tabla">
+        <tr>
+            <th class="tab"><i>ID</i></th>
+            <th class="tab"><i>Nombre</i></th>
+            <th class="tab"><i>Titulo</i></th>           
+        </tr>
+        <?php foreach ($listMenus->items as $empleado):?>
+            <tr>
+            <td class="tab"><?php echo $empleado->id?></td>
+            <td class="tab"><?php echo $empleado->nombre?></td>
+            <td class="tab"><?php echo $empleado->titulo?></td>
+            <td class="tab" align="center">
+                 <?php echo Html::linkAction("edit/$empleado->id/", 'Editar') ?>
+                 <?php echo Html::linkAction("del/$empleado->id/", 'Borrar') ?>
+            </td>
+            </tr>
+         <?php endforeach;?> 
+    </table>  
+ 
+    <br/>
+    <p class="links"><?php if ($listMenus->prev) echo Html::linkAction("index/$listMenus->prev/", '<< Anterior |'); ?></p>
+    <p class="links"><?php if ($listMenus->next) echo Html::linkAction("index/$listMenus->next/", 'Próximo >>'); ?></p>
+</div>

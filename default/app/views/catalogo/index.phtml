@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <?php echo Tag::css('estilos') ?>
+    <title>Titulos</title>
+<link rel="stylesheet" href="/Kumbia/default/public/css/estilos3.css">
+</head>
+<body>
+<table width="200" border="0" align="center">
+  <tr>
+    <td><img src="/Kumbia/default/public/img/itvologo.jpg" width="1300" height="350" alt="ITVO"></td>
+  </tr>
+  <tr>
+    <td>
+        <nav class="navegacion">
+            <ul class="menu" align="center">
+      <li><a href="/kumbia/">Inicio</a>  
+      <li><a href="#">Ponente</a>
+      <ul class="submenu">
+                        <li><a href="/kumbia/ponente/create">Crear</a></li>
+                        <li><a href="/kumbia/ponente">Ver</a></li>
+          </ul>
+        <li><a href="#">Participante</a>
+        <ul class="submenu">
+                        <li><a href="/kumbia/participante/create">Crear</a></li>
+                        <li><a href="/kumbia/participante">Ver</a></li>
+          </ul>
+          </li>
+                <li><a href="#">Evento</a>
+                    <ul class="submenu">
+                        <li><a href="/kumbia/evento/create">Crear</a></li>
+                        <li><a href="/kumbia/evento">Ver</a></li>
+                    </ul>
+                </li>
+        <li><a href="#">Organizador</a>
+          <ul class="submenu">
+            <li><a href="/kumbia/organizador/create">Crear</a></li>
+            <li><a href="/kumbia/organizador">Ver</a></li>
+          </ul>
+                <li><a href="#">Actividad</a>
+          <ul class="submenu">
+            <li><a href="/kumbia/actividad/create">Crear</a></li>
+            <li><a href="/kumbia/actividad">Ver</a></li>
+          </ul>
+        <li><a href="#">Catalogo</a>
+          <ul class="submenu">
+            <li><a href="/kumbia/catalogo/create">Crear</a></li>
+            <li><a href="/kumbia/catalogo">Ver</a></li>
+          </ul>
+        <li><a href="#">Pago</a>
+          <ul class="submenu">
+            <li><a href="/kumbia/pago/create">Crear</a></li>
+            <li><a href="/kumbia/pago">Ver</a></li>
+          </ul>
+        <li><a href="#">Detalle Pago</a>
+        <ul class="submenu">
+            <li><a href="/kumbia/pagodetalle/create">Crear</a></li>
+            <li><a href="/kumbia/pagodetalle">Ver</a></li>
+          </ul>
+        <li><a href="#">Horarios</a>
+        <ul class="submenu">
+            <li><a href="/kumbia/horario/create">Crear</a></li>
+            <li><a href="/kumbia/horario">Ver</a></li>
+          </ul>
+        <li><a href="#">Detalles Horario</a>
+        <ul class="submenu">
+            <li><a href="/kumbia/horariodetalle/create">Crear</a></li>
+            <li><a href="/kumbia/horariodetalle">Ver</a></li>
+          </ul>
+        <li><a href="#">Horario Participante</a>
+          <ul class="submenu">
+            <li><a href="/kumbia/participantehorario/create">Crear</a></li>
+            <li><a href="/kumbia/participantehorario">Ver</a></li>
+          </ul>
+        <li><a href="#">Categoria</a>
+          <ul class="submenu">
+            <li><a href="/kumbia/categoria/create">Crear</a></li>
+            <li><a href="/kumbia/categoria">Ver</a></li>
+          </ul>
+
+            </ul>
+        </nav>
+    </td>
+  </tr>
+  
+</table>
+ 
+    <section align="center">
+            <br>
+    <?php View::content(); ?>
+    <h3 align="center">Catalogo</h3>
+    <center>
+    <table>
+        <tr>
+            <th class="tab"><i>ID</i></th>
+            <th class="tab"><i>Titulo</i></th>
+            <th class="tab"><i>Actividad</i></th>
+            <th class="tab"><i>Evento</i></th>
+            <th class="tab"><i>Costo</i></th>
+            <th class="tab"><i>Horas</i></th>
+            <th class="tab"><i>Cupo limite</i></th>
+            <th class="tab"><i>Opciones</i></th>
+
+      
+        </tr>
+        <?php foreach ($listCatalogo->items as $catalogo):?>
+            <tr>
+            <td class="tab"><?php echo $catalogo->id?></td>
+            <td class="tab"><?php echo $catalogo->titulo?></td>
+            <td class="tab"><?php echo $catalogo->descripcion?></td>
+            <td class="tab"><?php echo $catalogo->titulos?></td>
+            <td class="tab"><?php echo $catalogo->costo?></td>
+            <td class="tab"><?php echo $catalogo->totalhoras?></td>
+            <td class="tab"><?php echo $catalogo->cupolimite?></td>
+            <td class="tab" align="center">
+                
+                 <?php echo Html::linkAction("edit/$catalogo->id/", 'Editar') ?>
+                 <?php echo Js::linkAction("del/$catalogo->id/", 'Borrar') ?>
+            </td>
+            </tr>
+         <?php endforeach;?> 
+    </table>  
+
+    <br/>
+    <p class="links"><?php if ($listCatalogo->prev) echo Html::linkAction("index/$listCatalogo->prev/", '<< Anterior |'); ?></p>
+    <p class="links"><?php if ($listCatalogo->next) echo Html::linkAction("index/$listCatalogo->next/", 'Próximo >>'); ?></p>
+    <br/>
+    
+    <a href="/kumbia/catalogo/create/"><input type="button" value="Registrar Nuevo"></a>
+    
+    </center>
+        </section>
+</body>
+</html>

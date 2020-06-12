@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<?php echo Tag::css('estilos') ?>
+	<title>Titulos</title>
+
+</head>
+<body>
+
+	<section align="center">
+<?php View::content(); ?>
+<br>
+
+
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+ 
+<form>
+<h3>Editar Horario</h3>
+
+<table cellspacing="12px"><tr>
+		<tr>
+		<td>
+			 <label>Horario</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('horariodetalle.horario_id') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Fecha</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('horariodetalle.fecha') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Horario de incio</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('horariodetalle.horarioincio') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Horario de finalizacion</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('horariodetalle.horafin') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Lugar</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('horariodetalle.lugar') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<th colspan="2">
+			   <?php echo Form::hidden('horariodetalle.id') ?>
+        <?php echo Form::submit('Actualizar') ?>
+		</th>
+	</tr>
+        
+
+
+</table>
+
+<?php echo Html::linkAction("", 'Lista') ?>
+</form>
+   
+<?php echo Form::close() ?>
+</section>
+</body>
+</html>

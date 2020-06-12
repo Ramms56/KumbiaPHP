@@ -1,0 +1,36 @@
+#tabla, .tab
+{
+
+    background: #b2e1ff; /* old browser */
+    background: -moz-linear-gradient(left, #b2e1ff 100%, #66b6fc 100%, #b2e1ff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #b2e1ff 100%,#66b6fc 100%, #b2e1ff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #b2e1ff 100%,#66b6fc 100%,#b2e1ff 100%); /* W3C, 1E10+, FF16+, Chrome26-, Operal2+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2elff', endColorstr='#b2e1ff',GradientType=1 ); /* 1E6-9 */
+    margin-left:220px; 
+    margin-top:30px; 
+    border:black 1px solid; 
+    border-spacing:0px; 
+    padding: 4px; 
+}
+
+.links
+{
+    margin-left:220px;
+}
+
+form
+{
+    display: inline-table;
+    border: black 1px solid;
+    border-radius: 10px;
+    margin-left: 10px;
+
+}
+
+#us
+{
+    background: skyblue;
+    border-radius: 5px;
+}
+
+

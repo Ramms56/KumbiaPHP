@@ -1,0 +1,28 @@
+<div class="content">
+    <?php View::content(); ?>
+    <h3>Usuario</h3>
+    <table id="tabla">
+        <tr>
+            <th class="tab"><i>ID</i></th>
+            <th class="tab"><i>Nombre</i></th>
+            <th class="tab"><i>Apellido</i></th>
+            <th class="tab"><i>Edad</i></th> 
+        </tr>
+        <?php foreach ($listUsuarios->items as $empleado):?>
+            <tr>
+            <td class="tab"><?php echo $empleado->id?></td>
+            <td class="tab"><?php echo $empleado->Nombre?></td>
+            <td class="tab"><?php echo $empleado->Apellido?></td>
+            <td class="tab"><?php echo $empleado->Edad?></td>
+            <td class="tab" align="center">
+                 <?php echo Html::linkAction("edit/$empleado->id/", 'Editar') ?>
+                 <?php echo Html::linkAction("del/$empleado->id/", 'Borrar') ?>
+            </td>
+            </tr>
+         <?php endforeach;?> 
+    </table>  
+ 
+    <br/>
+    <p class="links"><?php if ($listUsuarios->prev) echo Html::linkAction("index/$listUsuario->prev/", '<< Anterior |'); ?></p>
+    <p class="links"><?php if ($listUsuarios->next) echo Html::linkAction("index/$listUsuario->next/", 'Próximo >>'); ?></p>
+</div>

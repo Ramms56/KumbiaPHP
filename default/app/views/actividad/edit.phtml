@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<?php echo Tag::css('estilos') ?>
+	<title>Titulos</title>
+
+</head>
+<body>
+
+	<br>
+	<section align="center">
+<?php View::content(); ?>
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+ 
+ <center>
+<form>
+	
+<h3>Editar Actividad</h3>
+
+<table cellspacing="12px">
+	<tr>
+		<td>
+			 <label>Descripcion</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('actividad.descripcion') ?>
+		</td>
+	</tr>
+	
+	
+	<tr>
+		<th colspan="2">
+			   <?php echo Form::hidden('actividad.id_actividad') ?>
+        <?php echo Form::submit('Actualizar') ?>
+		</th>
+	</tr>
+    <tr>
+    	
+    </tr>    
+
+
+</table>
+
+
+<?php echo Html::linkAction("", 'Volver') ?>
+</form>
+   
+   </center>
+<?php echo Form::close() ?>
+</section>
+</body>
+</html>

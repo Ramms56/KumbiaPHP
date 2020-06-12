@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<?php echo Tag::css('estilos') ?>
+</head>
+<body>
+
+
+<section align="center">
+<?php View::content(); ?>
+<br>
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+ 
+
+
+
+<form>
+<h3 align="center">Editar Categoria</h3>
+
+<table cellspacing="12px">
+<tr>
+		<td>
+			 <label>Descripcion</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('categoria.descripcionc') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<th colspan="2">
+			   <?php echo Form::hidden('categoria.idc') ?>
+        <?php echo Form::submit('Actualizar') ?>
+		</th>
+	</tr>
+        
+
+
+</table>
+
+<?php echo Html::linkAction("", 'Lista') ?>
+</form>
+   
+<?php echo Form::close() ?>
+</section>
+</body>
+</html>

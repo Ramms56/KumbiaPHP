@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <?php echo Tag::css('estilos') ?>
+  <title>LOGIN</title>
+  <meta charset="utf-8">
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1">
+ <!-- <link rel="stylesheet" href="/Kumbia/default/public/css/styleS.css">-->
+  <!---<link rel="stylesheet" href="css/bootstrap.min.css">-->
+  <section align="center">
+ <?php View::content();?>
+<br>
+<?php echo Form::open('alumno/inicio');?>
+<form>
+<h3>Iniciar sesion</h3>
+
+
+<table cellspacing="12px">
+  <tr>
+    <td>
+       <label>CUENTA</label>
+    </td>
+    <td>
+           <?php echo Form::text('cuenta') ?>
+    </td>
+  </tr>
+    <tr>
+    <td>
+       <label>PASSWORD</label>
+    </td>
+    <td>
+           <?php echo Form::pass('pasword') ?>
+    </td>
+  </tr>
+   
+  <tr>
+    <th colspan="2">
+       <?php echo Form::submit('Ingresar') ?>
+                    
+    </th>
+    <th colspan="2">
+       <a class="btn btn-primary" href="/Kumbia/login/create" >REGISTRARME</a>            
+    </th>
+</table>
+</form>
+<?php echo Form::close() ?>
+
+</body>
+</html>
+
+
+
+<!--<?php View::content();?>
+<?php echo Form::open("index");?>
+<?php echo Form::label("Cuenta","cuenta");?>
+<?php echo Form::text("cuenta");?>
+<?php echo Form::label("Password","password");?>
+<?php echo Form::pass("password");?>
+<?php echo Form::submit("INGRESAR");?>
+<?php echo Form::close();?>-->

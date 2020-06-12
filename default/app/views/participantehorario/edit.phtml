@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<?php echo Tag::css('estilos') ?>
+	<title>Titulos</title>
+
+</head>
+<body>
+	<section align="center">
+
+<?php View::content(); ?>
+<br>
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+ 
+<form>
+<h3 align="center">Editar</h3>
+
+<table cellspacing="12px"><tr>
+	
+	<tr>
+		<td>
+			 <label>Participante</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('participantehorario.participante_id') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Horario</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('participantehorario.horario_id') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Fecha de Registro</label>
+		</td>
+		<td>
+        	 <?php echo Form::date('participantehorario.fecharegistro') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<th colspan="2">
+			   <?php echo Form::hidden('participantehorario.id') ?>
+        <?php echo Form::submit('Actualizar') ?>
+		</th>
+	</tr>
+        
+
+
+</table>
+
+<?php echo Html::linkAction("", 'Volver') ?>
+</form>
+   
+<?php echo Form::close() ?>
+</section>
+</body>
+</html>

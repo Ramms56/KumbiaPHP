@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<?php echo Tag::css('estilos') ?>
+	<title>Titulos</title>
+
+</head>
+<body>
+	<section align="center">
+<?php View::content(); ?>
+<br>
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+ 
+<form>
+<h3 align="center">Editar Ponente</h3>
+
+<table cellspacing="12px">
+	<tr>
+		<td>
+			 <label>Nombre Completo</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('ponente.nombrecompleto') ?>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			  <label><i>Sexo</i></label>
+        
+		</td>
+		<td>
+			<label><i>M </i><?php echo Form::radio('ponente.sexo','M','sexo')?></label>
+			<label><i>F </i><?php echo Form::radio('ponente.sexo','F','sexo')?></label>
+				
+			</td>
+	</tr>
+	<tr>
+		<td>
+			  <label>Foto</label>
+		</td>
+		<td><?php echo Form::text('ponente.foto') ?></td>
+	</tr>
+	<tr>
+		<td>
+			  <label>CV
+        </label>
+		</td>
+		<td><?php echo Form::text('ponente.cv') ?></td>
+	</tr>
+	<tr>
+		<td>
+			  <label>Nivel academico
+        </label>
+		</td>
+		<td><?php echo Form::text('ponente.nivelacademico') ?></td>
+	</tr>
+	<tr>
+		<td>
+			  <label>Cuenta
+        </label>
+		</td>
+		<td><?php echo Form::text('ponente.cuenta') ?></td>
+	</tr>
+	<tr>
+		<td>
+			  <label>Password
+        </label>
+		</td>
+		<td><?php echo Form::pass('ponente.password') ?></td>
+	</tr>
+
+	<tr>
+		<td>
+			  <label>Correo
+        </label>
+		</td>
+		<td><?php echo Form::text('ponente.correo') ?></td>
+	</tr>
+<tr>
+		<th colspan="2">
+			   <?php echo Form::hidden('ponente.id') ?>
+        <?php echo Form::submit('Actualizar') ?>
+		</th>
+	</tr>
+
+
+</table>
+<?php echo Html::linkAction("", 'Volver') ?>
+</form>
+   
+<?php echo Form::close() ?>
+</section>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?php View::content(); ?>
+<h3>Crear Nuevos Empleados<h3>
+ 
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+ 
+        <label>Nombre
+        <?php echo Form::text('empleados.Nombre') ?></label>
+
+        <label>Apellido
+        <?php echo Form::text('empleados.Apellido') ?></label>
+        
+         <label>Cargo
+        <?php echo Form::select('empleados.cargo',array(1=>'Jefe',2=>'sub jefe',3=>'mortal')) ?></label>
+        
+        
+  
+ 
+        <?php echo Form::submit('Agregar') ?>
+ 
+<?php echo Form::close() ?>
+

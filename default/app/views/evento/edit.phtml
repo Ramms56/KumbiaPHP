@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+
+
+	<section align="center">
+	<?php echo Tag::css('estilos') ?>
+<?php View::content(); ?>
+<br>
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+ 
+<form>
+<h3 align="center">Editar Organizador</h3>
+
+<table cellspacing="12px">
+	<tr>
+		<td>
+			 <label>Titulo</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('evento.titulo') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Descripcion</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('evento.descripcion') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Fecha de Inicio</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('evento.fechainicio') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Fecha de Finalizacion</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('evento.fechafin') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Observaciones</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('evento.observaciones') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Logotipo</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('evento.logotipo') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Eslogan</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('evento.eslogan') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Lugar</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('evento.lugar') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Categoria</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('evento.categoria_id') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Inicio de Registro</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('evento.inicioregistro') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Cierrer de Registro</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('evento.cierreregistro') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Organizador</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('evento.organizador_id') ?>
+		</td>
+	</tr>
+	
+
+	<tr>
+		<th colspan="2">
+			   <?php echo Form::hidden('evento.id') ?>
+        <?php echo Form::submit('Actualizar') ?>
+		</th>
+	</tr>
+        
+
+
+</table>
+
+<?php echo Html::linkAction("", 'Lista') ?>
+</form>
+   
+<?php echo Form::close() ?>
+</section>
+</body>
+</html>

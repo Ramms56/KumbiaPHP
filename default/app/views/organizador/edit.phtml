@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<?php echo Tag::css('estilos') ?>
+	<title>Titulos</title>
+
+</head>
+<body>
+	<section align="center">
+<?php View::content(); ?>
+<br>
+<?php echo Form::open(); // por defecto llama a la misma url ?>
+ 
+<form>
+<h3 align="center">Editar Organizador</h3>
+
+<table cellspacing="12px">
+	<tr>
+		<td>
+			 <label>Nombre Razon Social</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('organizador.nombreorazonsocial') ?>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			 <label>RFC</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('organizador.rfc') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Contacto</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('organizador.contacto') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>URL</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('organizador.url') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Correo</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('organizador.correo') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Telefono</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('organizador.telefono') ?>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			 <label>Direccion</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('organizador.direccion') ?>
+		</td>
+	</tr>
+	
+
+	<tr>
+		<th colspan="2">
+			   <?php echo Form::hidden('organizador.id') ?>
+        <?php echo Form::submit('Actualizar') ?>
+		</th>
+	</tr>
+        
+
+
+</table>
+
+<?php echo Html::linkAction("", 'Volver') ?>
+</form>
+   
+<?php echo Form::close() ?>
+</section>
+</body>
+</html>

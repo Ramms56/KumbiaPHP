@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <?php echo Tag::css('estilos') ?>
+    <title>Titulos</title>
+<link rel="stylesheet" href="/Kumbia/default/public/css/estilos3.css">
+</head>
+<body>
+<table width="200" border="0" align="center">
+  <tr>
+    <td><img src="/Kumbia/default/public/img/itvologo.jpg" width="1300" height="350" alt="ITVO"></td>
+  </tr>
+  <tr>
+    <td>
+        <nav class="navegacion">
+            <ul class="menu" align="center">
+      <li><a href="/kumbia/">Inicio</a>  
+      <li><a href="#">Ponente</a>
+      <ul class="submenu">
+                        <li><a href="/kumbia/ponente/create">Crear</a></li>
+                        <li><a href="/kumbia/ponente">Ver</a></li>
+          </ul>
+        <li><a href="#">Participante</a>
+        <ul class="submenu">
+                        <li><a href="/kumbia/participante/create">Crear</a></li>
+                        <li><a href="/kumbia/participante">Ver</a></li>
+          </ul>
+          </li>
+                <li><a href="#">Evento</a>
+                    <ul class="submenu">
+                        <li><a href="/kumbia/evento/create">Crear</a></li>
+                        <li><a href="/kumbia/evento">Ver</a></li>
+                    </ul>
+                </li>
+        <li><a href="#">Organizador</a>
+          <ul class="submenu">
+            <li><a href="/kumbia/organizador/create">Crear</a></li>
+            <li><a href="/kumbia/organizador">Ver</a></li>
+          </ul>
+                <li><a href="#">Actividad</a>
+          <ul class="submenu">
+            <li><a href="/kumbia/actividad/create">Crear</a></li>
+            <li><a href="/kumbia/actividad">Ver</a></li>
+          </ul>
+        <li><a href="#">Catalogo</a>
+          <ul class="submenu">
+            <li><a href="/kumbia/catalogo/create">Crear</a></li>
+            <li><a href="/kumbia/catalogo">Ver</a></li>
+          </ul>
+        <li><a href="#">Pago</a>
+          <ul class="submenu">
+            <li><a href="/kumbia/pago/create">Crear</a></li>
+            <li><a href="/kumbia/pago">Ver</a></li>
+          </ul>
+        <li><a href="#">Detalle Pago</a>
+        <ul class="submenu">
+            <li><a href="/kumbia/pagodetalle/create">Crear</a></li>
+            <li><a href="/kumbia/pagodetalle">Ver</a></li>
+          </ul>
+        <li><a href="#">Horarios</a>
+        <ul class="submenu">
+            <li><a href="/kumbia/horario/create">Crear</a></li>
+            <li><a href="/kumbia/horario">Ver</a></li>
+          </ul>
+        <li><a href="#">Detalles Horario</a>
+        <ul class="submenu">
+            <li><a href="/kumbia/horariodetalle/create">Crear</a></li>
+            <li><a href="/kumbia/horariodetalle">Ver</a></li>
+          </ul>
+        <li><a href="#">Horario Participante</a>
+          <ul class="submenu">
+            <li><a href="/kumbia/participantehorario/create">Crear</a></li>
+            <li><a href="/kumbia/participantehorario">Ver</a></li>
+          </ul>
+        <li><a href="#">Categoria</a>
+          <ul class="submenu">
+            <li><a href="/kumbia/categoria/create">Crear</a></li>
+            <li><a href="/kumbia/categoria">Ver</a></li>
+          </ul>
+
+            </ul>
+        </nav>
+    </td>
+  </tr>
+  
+</table>
+	<section align="center">
+<?php View::content();?>
+<br>
+<?php echo Form::open();?>
+<form>
+<h3 align="center">Agregar Detalle</h3>
+
+<table cellspacing="12px">
+	<tr>
+		<td>
+			 <label>Pago</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('pagodetalle.pago_id') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Catalogo</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('pagodetalle.catalogo_id') ?>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			 <label>Importe</label>
+		</td>
+		<td>
+        	 <?php echo Form::text('pagodetalle.importe') ?>
+		</td>
+	</tr>
+
+	
+
+	<tr>
+		<th colspan="2">
+			 <?php echo Form::submit('Guardar') ?>
+                    
+		</th>
+	</tr>
+        
+
+	</tr>
+
+</table>
+
+</form>
+<?php echo Form::close() ?>
+</section>
+</body>
+</html>
+
